@@ -12,11 +12,9 @@ public class App {
                 (HelloWorld) applicationContext.getBean("helloworld");
         System.out.println(bean == bean2);
 
-        Cat beanCat1 =
-                (Cat) applicationContext.getBean("cat");
+        Cat beanCat1 = applicationContext.getBean("cat", Cat.class);
         System.out.println(beanCat1.getMessage());
-        Cat beanCat2 =
-                (Cat) applicationContext.getBean("cat");
+        Cat beanCat2 = applicationContext.getBean("cat", Cat.class);
         System.out.println(beanCat1 == beanCat2);
     }
 }
